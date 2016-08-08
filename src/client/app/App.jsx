@@ -1,7 +1,7 @@
 // import the libs we need
 import React                          from 'react'
 import ReactDOM                       from 'react-dom'
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, Link, hashHistory } from 'react-router'
 
 import Index                          from './Index.jsx'
 import Dashboard                      from './Dashboard.jsx'
@@ -11,6 +11,14 @@ import ThankYou                       from './ThankYou.jsx'
 
 // create a React Component called _App_
 export default class App extends React.Component{
+
+  constructor(){
+    super()
+
+    this.state = {
+      message: 'yo'
+    }
+  }
 
   render(){
     return (
