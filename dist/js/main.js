@@ -47,7 +47,7 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _App=__webpack_require__(/*! ./App.jsx */ 1);var _App2=_interopRequireDefault(_App);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// require('bootstrap/dist/css/bootstrap.css');
+	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 245);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// require('bootstrap/dist/css/bootstrap.css');
 	__webpack_require__(/*! ../css/styles.css */ 176);
 
 /***/ },
@@ -57,11 +57,7 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 177);var _Index=__webpack_require__(/*! ./Index.jsx */ 240);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./Dashboard.jsx */ 241);var _Dashboard2=_interopRequireDefault(_Dashboard);var _Application=__webpack_require__(/*! ./Application.jsx */ 242);var _Application2=_interopRequireDefault(_Application);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 243);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
-	// import Index                          from './Index.jsx'
-	// create a React Component called _App_
-	var App=function(_React$Component){_inherits(App,_React$Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,Object.getPrototypeOf(App).call(this));_this.state={message:'yo'};return _this;}_createClass(App,[{key:'render',value:function render(){return _react2.default.createElement(_reactRouter.Router,{history:_reactRouter.hashHistory},_react2.default.createElement(_reactRouter.Route,{path:'/',component:_Index2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/dashboard',component:_Dashboard2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/application',component:_Application2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/thanks',component:_ThankYou2.default}));}}]);return App;}(_react2.default.Component);// mount our App at #container
-	exports.default=App;_reactDom2.default.render(_react2.default.createElement(App,null),document.querySelector('#container'));
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 246);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var App=exports.App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement(_Nav.Navigation,null),children);};
 
 /***/ },
 /* 2 */
@@ -8516,7 +8512,7 @@
   \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 177);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Index=function Index(props){return _react2.default.createElement('div',null,_react2.default.createElement('div',null,_react2.default.createElement('ul',{role:'nav'},_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard'},'Dashboard')),_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/application'},'Application')))));};exports.default=Index;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 177);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Index=function Index(props){return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Index'));};exports.default=Index;
 
 /***/ },
 /* 241 */
@@ -8544,6 +8540,30 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ThankYou=function ThankYou(props){return _react2.default.createElement('h1',null,'Thank You');};exports.default=ThankYou;
+
+/***/ },
+/* 244 */,
+/* 245 */
+/*!***********************************!*\
+  !*** ./src/client/app/Routes.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 177);var _App=__webpack_require__(/*! ./App.jsx */ 1);var _Index=__webpack_require__(/*! ./Index.jsx */ 240);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./Dashboard.jsx */ 241);var _Dashboard2=_interopRequireDefault(_Dashboard);var _Application=__webpack_require__(/*! ./Application.jsx */ 242);var _Application2=_interopRequireDefault(_Application);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 243);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
+	//templates
+	//pages
+	// Our react class
+	var Routes=function(_React$Component){_inherits(Routes,_React$Component);function Routes(){_classCallCheck(this,Routes);return _possibleConstructorReturn(this,Object.getPrototypeOf(Routes).apply(this,arguments));}_createClass(Routes,[{key:'render',value:function render(){return _react2.default.createElement(_reactRouter.Router,{history:_reactRouter.browserHistory},_react2.default.createElement(_reactRouter.Route,{path:'/',component:_App.App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_Index2.default}),_react2.default.createElement(_reactRouter.Route,{path:'/dashboard',component:_Dashboard2.default})));}}]);return Routes;}(_react2.default.Component);// mount our App at #container
+	exports.default=Routes;_reactDom2.default.render(_react2.default.createElement(Routes,null),document.querySelector('#container'));
+
+/***/ },
+/* 246 */
+/*!********************************!*\
+  !*** ./src/client/app/Nav.jsx ***!
+  \********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.Navigation=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 177);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Navigation=exports.Navigation=function Navigation(){return _react2.default.createElement('ul',null,_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.IndexLink,{to:'/',activeClassName:'active'},'Index')),_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard',activeClassName:'active'},'Dashboard')));};
 
 /***/ }
 /******/ ]);

@@ -3,12 +3,7 @@ import {Link}   from 'react-router'
 const Index =props=>{
   return(
        <div>
-        <div>
-        <ul role="nav">
-          <li><Link to="/dashboard">Dashboard</Link></li>
-          <li><Link to="/application">Application</Link></li>
-        </ul>
-      </div>
+        <h1>Index</h1>
        </div>
     )
 }
