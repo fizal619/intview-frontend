@@ -1,28 +1,19 @@
 import React from 'react';
+import {Nav} from './Nav.jsx'
+import {Header} from './Header.jsx'
 
-//children appear in here, TODO define header and footer
+//children appear in here, TODO define header and footer somehow doesn't work
 
-class App extends React.Component {
+const App =({children})=> {
 
-
-  constructor(){
-    super()
-
-    this.state={
-      application:{
-        jobTitle: 'Job Title'
-      }
-    }
-  }
-
-
-render(){
   return(
     <div>
+      <Header />
       { children }
     </div>
   )
+
 }
-}
+
 
 export default App

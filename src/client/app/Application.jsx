@@ -1,14 +1,17 @@
 import React from 'react'
 
+
+
 export default class Application extends React.Component {
+
 
   constructor(){
     super()
 
     this.state={
       application:{
-        title: 'Job Title',
-        questions: ['questions', 'questions']
+        title: '',
+        questions: []
       }
     }
 
@@ -16,7 +19,9 @@ export default class Application extends React.Component {
 
   componentDidMount(){
     // fetch the questions from the db
-    fetch('http://localhost:3000/applications/1').then(r=>r.json()).then(r=>{
+    fetch('http://localhost:3000/applications/'+this.props.params.id)
+    .then(r=>r.json())
+    .then(r=>{
 
       r.questions = r.questions.split('|')
 
@@ -26,16 +31,37 @@ export default class Application extends React.Component {
     })
   }
 
+  //========================================
+  // My Code
+  //========================================
+
+
+  handleSubmit(event){
+    event.preventDefault()
+
+  }
+
+
+  //========================================
+
+
+
   render(){
 
     return(
         <div>
           <h1>{this.state.application.title}</h1>
-          <ul>
+          <form onSubmit={this.handleSubmit}>
           {this.state.application.questions.map((item, key)=>{
-            <li key={key}>{item}</li>
+            return(
+              <p key={key}>
+               {item} <br/>
+              <textarea rows="4" cols="100" name={key.toString()} defaultValue="Please use at least 500 words in your answer..."></textarea>
+              </p>
+              )
           })}
-          </ul>
+          <button>Submit</button>
+          </form>
         </div>
       )
   }
