@@ -1,9 +1,28 @@
 import React from 'react';
-import { Navigation } from './Nav.jsx';
 
-export const App = ( { children } ) => (
-  <div>
-    <Navigation />
-    { children }
-  </div>
-)
+//children appear in here, TODO define header and footer
+
+class App extends React.Component {
+
+
+  constructor(){
+    super()
+
+    this.state={
+      application:{
+        jobTitle: 'Job Title'
+      }
+    }
+  }
+
+
+render(){
+  return(
+    <div>
+      { children }
+    </div>
+  )
+}
+}
+
+export default App

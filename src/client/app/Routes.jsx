@@ -21,6 +21,7 @@ export default class Routes extends React.Component{
         <Route path="/" component={App}>
           <IndexRoute component={Index} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/application/:id" component={Application} />
         </Route>
       </Router>
     )
