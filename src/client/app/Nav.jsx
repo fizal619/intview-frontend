@@ -2,7 +2,6 @@ import React from 'react';
 import { IndexLink, Link } from 'react-router';
 
 const Nav = () => {
-  console.log("Navigation")
   return (
   <ul>
     <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
