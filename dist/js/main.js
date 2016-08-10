@@ -8508,8 +8508,8 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 245);var _Header=__webpack_require__(/*! ./Header.jsx */ 246);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//children appear in here, TODO define header and footer somehow doesn't work
-	var App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement(_Header.Header,null),children);};exports.default=App;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Header=__webpack_require__(/*! ./Header.jsx */ 246);var _Header2=_interopRequireDefault(_Header);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//children appear in here, TODO define header and footer somehow doesn't work
+	var App=exports.App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement(_Header2.default,null),children);};
 
 /***/ },
 /* 240 */
@@ -8570,7 +8570,7 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Nav=function Nav(){console.log("Navigation");return _react2.default.createElement('ul',null,_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.IndexLink,{to:'/',activeClassName:'active'},'Index')),_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard',activeClassName:'active'},'Dashboard')));};exports.default=Nav;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Nav=function Nav(){console.log("Navigation");return _react2.default.createElement('ul',null,_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.IndexLink,{to:'/',activeClassName:'active'},'Home')),_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard',activeClassName:'active'},'Dashboard')),_react2.default.createElement('li',null,_react2.default.createElement('a',{href:'http://github.com/fizal619/intview-backend'},'About This Project')));};exports.default=Nav;
 
 /***/ },
 /* 246 */
@@ -8579,7 +8579,7 @@
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.Header=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 245);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Header=exports.Header=function Header(props){return React.createElement('header',null,React.createElement('h2',null,'IntView'),React.createElement(_Nav.Nav,null));};
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 245);var _Nav2=_interopRequireDefault(_Nav);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Header=function Header(props){return _react2.default.createElement('header',null,_react2.default.createElement(_Nav2.default,null),_react2.default.createElement('h2',null,'IntView'),_react2.default.createElement('hr',null));};exports.default=Header;
 
 /***/ }
 /******/ ]);

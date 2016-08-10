@@ -1,12 +1,14 @@
-import react from 'react'
-import {Nav} from './Nav.jsx'
+import React from 'react'
+import Nav from './Nav.jsx'
 
-export const Header =props=>{
+const Header =props=>{
   return(
       <header>
-        <h2>IntView</h2>
-
         <Nav />
+        <h2>IntView</h2>
+        <hr/>
       </header>
     )
 }
+
+export default Header
