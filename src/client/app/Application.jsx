@@ -42,8 +42,10 @@ export default class Application extends React.Component {
     let length = event.target.children.length
     let count = 2
     let content = ""
-    while(6 > count){
-      content += event.target[count.toString()].value + "\n"
+    while(length > count){
+      if(event.target[count.toString()] !== undefined){
+        content += event.target[count.toString()].value + "\n"
+      }
       count++
     }
     let response = {
