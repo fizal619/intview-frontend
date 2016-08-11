@@ -90,7 +90,7 @@ export default class Header extends React.Component{
     }else{
       return(
         <form onSubmit={this.login.bind(this)}>
-          <p>Login to view your dashboard</p>
+          <p>Login to view your dashboard:</p>
           <input name="email" type="text" placeholder="Email" />
           <input name="password" type="text" placeholder="Password" />
           <button>Submit</button>
@@ -109,6 +109,8 @@ export default class Header extends React.Component{
           <Nav />
           <h2>IntView</h2>
           {this.loggedIn(this.state.loggedIn)}
+          <br/>
+          <br/>
           <hr/>
         </header>
       )
