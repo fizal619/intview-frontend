@@ -1,1 +1,12 @@
 /* Custom CSS to be delivered into the 'dist/' directory */
+body{
+  font-family: sans-serif;
+}
+
+ul{
+  list-style:none;
+}
+li{
+  display: inline;
+  margin:10px;
+}

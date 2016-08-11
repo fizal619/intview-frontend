@@ -42,7 +42,7 @@ export default class Application extends React.Component {
     let length = event.target.children.length
     let count = 2
     let content = ""
-    while(length > count){
+    while(6 > count){
       content += event.target[count.toString()].value + "\n"
       count++
     }
@@ -59,7 +59,7 @@ export default class Application extends React.Component {
     var myHeaders = new Headers()
 
     myHeaders.append('Content-Type', 'application/json')
-    myHeaders.append('Origin', 'http://localhost:4000')
+    myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
 
     fetch('http://localhost:3000/responses', {
       method:'POST',
@@ -83,19 +83,24 @@ export default class Application extends React.Component {
 
     return(
         <div>
-          <h1>{this.state.application.title}</h1>
+          <h1>Applying for: {this.state.application.title}</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="text" name="email" placeholder="Email" />
-          {this.state.application.questions.map((item, key)=>{
-            return(
-              <p key={key}>
-               {item} <br/>
-              <textarea rows="5" cols="80" name={key.toString()} placeholder="Please use at least 500 words in your answer..."></textarea>
-              </p>
-              )
-          })}
-          <button>Submit</button>
+            <input type="text" name="name" placeholder="Name" />
+            <input type="text" name="email" placeholder="Email" />
+            <p>Cover Letter: <br/>
+              <textarea rows="6" cols="80" name="coverLetter" placeholder="Paste your cover letter here"></textarea>
+            </p>
+            <h3>Interview Questions:</h3>
+            <p>Personal Essays</p>
+            {this.state.application.questions.map((item, key)=>{
+              return(
+                <p key={key}>
+                 {item} <br/>
+                <textarea rows="8" cols="80" placeholder="Please use at least 500 words in your answer..."></textarea>
+                </p>
+                )
+            })}
+            <button>Submit</button>
           </form>
         </div>
       )
