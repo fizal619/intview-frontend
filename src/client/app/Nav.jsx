@@ -16,7 +16,11 @@ const Nav = () => {
     }catch(e){
       console.log('error in the navigation try catch, yes this is a very specific message.')
     }
-    return
+    return(
+
+        <li><Link to="/register" activeClassName="active">Register</Link></li>
+
+      )
   }
 
   return (

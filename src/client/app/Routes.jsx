@@ -9,6 +9,7 @@ import {App}                          from './App.jsx'
 //pages
 import Index                          from './Index.jsx'
 import Dashboard                      from './Dashboard.jsx'
+import Register                      from './Register.jsx'
 import Application                    from './Application.jsx'
 import ThankYou                       from './ThankYou.jsx'
 
@@ -21,6 +22,7 @@ export default class Routes extends React.Component{
         <Route path="/" component={App}>
           <IndexRoute component={Index} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/register" component={Register} />
           <Route path="/application/:id" component={Application} />
         </Route>
       </Router>

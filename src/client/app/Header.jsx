@@ -69,10 +69,8 @@ export default class Header extends React.Component{
   // LOGOUT!
   logout(){
     sessionStorage.removeItem('intview')
-    this.setState({
-      loggedIn:false,
-      user: 'Guest'
-    })
+
+    window.location = "/"
   }
 
   //========================================
