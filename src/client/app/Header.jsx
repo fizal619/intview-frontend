@@ -50,13 +50,29 @@ export default class Header extends React.Component{
     })
     .then(r=>r.json())
     .then(data=>{
-      sessionStorage.setItem('intview',JSON.stringify(data))
-      console.log(sessionStorage.getItem('intview'))
-      this.setState({
-        loggedIn: true
-      })
+      if (data.error) {
+          console.log(data.error) //INVALIDDDDDWill do some stuff here later
+      }else{
+        sessionStorage.setItem('intview',JSON.stringify(data))
+        console.log(sessionStorage.getItem('intview'))
+        this.setState({
+          loggedIn: true,
+          user: JSON.parse(sessionStorage.getItem('intview')).username
+        })
+      }
     })
 
+  }
+
+  //========================================
+
+  // LOGOUT!
+  logout(){
+    sessionStorage.removeItem('intview')
+    this.setState({
+      loggedIn:false,
+      user: 'Guest'
+    })
   }
 
   //========================================
@@ -66,14 +82,18 @@ export default class Header extends React.Component{
   loggedIn(loggedInState){
     if(loggedInState){
       return(
-        <h3>Hi {this.state.user}</h3>
+        <div>
+          <h3>Hi {this.state.user}</h3>
+          <button onClick={this.logout.bind(this)}>Logout</button>
+        </div>
         )
     }else{
       return(
         <form onSubmit={this.login.bind(this)}>
+          <p>Login to view your dashboard</p>
           <input name="email" type="text" placeholder="Email" />
           <input name="password" type="text" placeholder="Password" />
-          <input type="submit" value="Log In" />
+          <button>Submit</button>
         </form>
         )
     }
