@@ -48,7 +48,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 1);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// require('bootstrap/dist/css/bootstrap.css');
-	__webpack_require__(/*! ../css/styles.css */ 244);
+	__webpack_require__(/*! ../css/styles.css */ 247);
 
 /***/ },
 /* 1 */
@@ -57,7 +57,7 @@
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 176);var _App=__webpack_require__(/*! ./App.jsx */ 239);var _Index=__webpack_require__(/*! ./Index.jsx */ 240);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./Dashboard.jsx */ 241);var _Dashboard2=_interopRequireDefault(_Dashboard);var _Register=__webpack_require__(/*! ./Register.jsx */ 247);var _Register2=_interopRequireDefault(_Register);var _Application=__webpack_require__(/*! ./Application.jsx */ 242);var _Application2=_interopRequireDefault(_Application);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 243);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 176);var _App=__webpack_require__(/*! ./App.jsx */ 239);var _Index=__webpack_require__(/*! ./Index.jsx */ 242);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./Dashboard.jsx */ 243);var _Dashboard2=_interopRequireDefault(_Dashboard);var _Register=__webpack_require__(/*! ./Register.jsx */ 244);var _Register2=_interopRequireDefault(_Register);var _Application=__webpack_require__(/*! ./Application.jsx */ 245);var _Application2=_interopRequireDefault(_Application);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 246);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
 	//templates
 	//pages
 	// Our react class
@@ -8508,11 +8508,41 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Header=__webpack_require__(/*! ./Header.jsx */ 246);var _Header2=_interopRequireDefault(_Header);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//children appear in here, TODO define header and footer somehow doesn't work
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Header=__webpack_require__(/*! ./Header.jsx */ 240);var _Header2=_interopRequireDefault(_Header);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//children appear in here, TODO define header and footer somehow doesn't work
 	var App=exports.App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement(_Header2.default,null),children);};
 
 /***/ },
 /* 240 */
+/*!***********************************!*\
+  !*** ./src/client/app/Header.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 241);var _Nav2=_interopRequireDefault(_Nav);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_React$Component){_inherits(Header,_React$Component);function Header(){_classCallCheck(this,Header);var _this=_possibleConstructorReturn(this,Object.getPrototypeOf(Header).call(this));_this.state={loggedIn:false,user:'Guest'};return _this;}_createClass(Header,[{key:'componentDidMount',value:function componentDidMount(){try{var session=JSON.parse(sessionStorage.getItem('intview'));this.setState({loggedIn:true,user:session.username});}catch(e){console.log('Error',e);}}//========================================
+	// My Code
+	//========================================
+	//login: the actual form action
+	},{key:'login',value:function login(e){var _this2=this;e.preventDefault();var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
+	fetch('http://localhost:3000/v1/login',{method:'POST',body:JSON.stringify({email:e.target.email.value,password:e.target.password.value}),headers:myHeaders}).then(function(r){return r.json();}).then(function(data){if(data.error){console.log(data.error);//INVALIDDDDDWill do some stuff here later
+	}else{sessionStorage.setItem('intview',JSON.stringify(data));console.log(sessionStorage.getItem('intview'));_this2.setState({loggedIn:true,user:JSON.parse(sessionStorage.getItem('intview')).username});}});}//========================================
+	// LOGOUT!
+	},{key:'logout',value:function logout(){sessionStorage.removeItem('intview');window.location="/";}//========================================
+	// logged in? renders a component
+	},{key:'loggedIn',value:function loggedIn(loggedInState){if(loggedInState){return _react2.default.createElement('div',null,_react2.default.createElement('h3',null,'Hi ',this.state.user),_react2.default.createElement('button',{onClick:this.logout.bind(this)},'Logout'));}else{return _react2.default.createElement('form',{onSubmit:this.login.bind(this)},_react2.default.createElement('p',null,'Login to view your dashboard:'),_react2.default.createElement('input',{name:'email',type:'text',placeholder:'Email'}),_react2.default.createElement('input',{name:'password',type:'text',placeholder:'Password'}),_react2.default.createElement('button',null,'Submit'));}}//========================================
+	},{key:'render',value:function render(){return _react2.default.createElement('header',null,_react2.default.createElement(_Nav2.default,null),_react2.default.createElement('h2',null,'IntView'),this.loggedIn(this.state.loggedIn),_react2.default.createElement('br',null),_react2.default.createElement('br',null),_react2.default.createElement('hr',null));}}]);return Header;}(_react2.default.Component);exports.default=Header;
+
+/***/ },
+/* 241 */
+/*!********************************!*\
+  !*** ./src/client/app/Nav.jsx ***!
+  \********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Nav=function Nav(){//TO render list main menu items if a user is logged in
+	var loggedIn=function loggedIn(){try{var session=sessionStorage.getItem('intview');if(session){return _react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard',activeClassName:'active'},'Dashboard'));}}catch(e){console.log('error in the navigation try catch, yes this is a very specific message.');}return _react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/register',activeClassName:'active'},'Register'));};return _react2.default.createElement('ul',null,_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.IndexLink,{to:'/',activeClassName:'active'},'Home')),loggedIn(),_react2.default.createElement('li',null,_react2.default.createElement('a',{href:'http://github.com/fizal619/intview-backend'},'About This Project')));};exports.default=Nav;
+
+/***/ },
+/* 242 */
 /*!**********************************!*\
   !*** ./src/client/app/Index.jsx ***!
   \**********************************/
@@ -8521,17 +8551,39 @@
 	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Index=function Index(props){return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Home'));};exports.default=Index;
 
 /***/ },
-/* 241 */
+/* 243 */
 /*!**************************************!*\
   !*** ./src/client/app/Dashboard.jsx ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//TODO refer to wireframe
-	var Dashboard=function Dashboard(props){return _react2.default.createElement('h1',null,'Dashboard');};exports.default=Dashboard;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}//TODO refer to wireframe
+	var Dashboard=function(_React$Component){_inherits(Dashboard,_React$Component);function Dashboard(){_classCallCheck(this,Dashboard);var _this=_possibleConstructorReturn(this,Object.getPrototypeOf(Dashboard).call(this));_this.state={applications:[]};return _this;}// let's grab all the applications from the DB for the logged in user
+	_createClass(Dashboard,[{key:'componentDidMount',value:function componentDidMount(){var session=JSON.parse(sessionStorage.getItem('intview'));if(!session){// redirect if not logged in
+	location="/";}else{this.getApplications();}}//========================================
+	// My Code
+	//========================================
+	},{key:'getApplications',value:function getApplications(){var _this2=this;// try to get the token from the sessionStorage
+	var token=JSON.parse(sessionStorage.getItem('intview'))['access_token'];var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Authorization',token);myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
+	fetch('http://localhost:3000/applications',{method:'GET',headers:myHeaders}).then(function(r){return r.json();}).then(function(data){console.log(data);_this2.setState({applications:data.applications});});}//========================================
+	},{key:'render',value:function render(){return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Dashboard'),_react2.default.createElement('br',null),_react2.default.createElement('div',{id:'results'},this.state.applications.length>0?this.state.applications.map(function(item,key){return _react2.default.createElement('p',{key:key},_react2.default.createElement('span',{className:'applicationName'},item.application.title),' |',_react2.default.createElement('span',{className:'responseCount'},item.responses.length,' Responses!'),' |',_react2.default.createElement('button',null,'Delete'),' |',_react2.default.createElement('button',null,'View'));}):_react2.default.createElement('p',null,'No applications to show.')));}}]);return Dashboard;}(_react2.default.Component);exports.default=Dashboard;
 
 /***/ },
-/* 242 */
+/* 244 */
+/*!*************************************!*\
+  !*** ./src/client/app/Register.jsx ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Register=function Register(props){var register=function register(e){e.preventDefault();var data={user:{username:e.target.username.value,email:e.target.email.value,password:e.target.password.value,password_confirmation:e.target['password_confirmation'].value}};console.log(data);e.target.reset();//send it to the server
+	var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
+	fetch('http://localhost:3000/v1/users',{method:'POST',body:JSON.stringify(data),headers:myHeaders}).then(function(r){return r.json();}).then(function(r){console.log(r);// log them in
+	if(r.error){console.log(r.error);//INVALIDDDDDWill do some stuff here later
+	}else{sessionStorage.setItem('intview',JSON.stringify(r));console.log(sessionStorage.getItem('intview'));}//send them away
+	window.location="/dashboard";});};return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Register'),_react2.default.createElement('form',{onSubmit:register},_react2.default.createElement('input',{type:'text',name:'username',placeholder:'Username'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'text',name:'email',placeholder:'Email'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'password',name:'password',placeholder:'Password'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'password',name:'password_confirmation',placeholder:'Password Again'}),_react2.default.createElement('br',null),_react2.default.createElement('button',null,'Sign Up')));};exports.default=Register;
+
+/***/ },
+/* 245 */
 /*!****************************************!*\
   !*** ./src/client/app/Application.jsx ***!
   \****************************************/
@@ -8550,7 +8602,7 @@
 	exports.default=Application;
 
 /***/ },
-/* 243 */
+/* 246 */
 /*!*************************************!*\
   !*** ./src/client/app/ThankYou.jsx ***!
   \*************************************/
@@ -8559,57 +8611,13 @@
 	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ThankYou=function ThankYou(props){return _react2.default.createElement('h1',null,'Thank You');};exports.default=ThankYou;
 
 /***/ },
-/* 244 */
+/* 247 */
 /*!***********************************!*\
   !*** ./src/client/css/styles.css ***!
   \***********************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 245 */
-/*!********************************!*\
-  !*** ./src/client/app/Nav.jsx ***!
-  \********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Nav=function Nav(){//TO render list main menu items if a user is logged in
-	var loggedIn=function loggedIn(){try{var session=sessionStorage.getItem('intview');if(session){return _react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/dashboard',activeClassName:'active'},'Dashboard'));}}catch(e){console.log('error in the navigation try catch, yes this is a very specific message.');}return _react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.Link,{to:'/register',activeClassName:'active'},'Register'));};return _react2.default.createElement('ul',null,_react2.default.createElement('li',null,_react2.default.createElement(_reactRouter.IndexLink,{to:'/',activeClassName:'active'},'Home')),loggedIn(),_react2.default.createElement('li',null,_react2.default.createElement('a',{href:'http://github.com/fizal619/intview-backend'},'About This Project')));};exports.default=Nav;
-
-/***/ },
-/* 246 */
-/*!***********************************!*\
-  !*** ./src/client/app/Header.jsx ***!
-  \***********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Nav=__webpack_require__(/*! ./Nav.jsx */ 245);var _Nav2=_interopRequireDefault(_Nav);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Header=function(_React$Component){_inherits(Header,_React$Component);function Header(){_classCallCheck(this,Header);var _this=_possibleConstructorReturn(this,Object.getPrototypeOf(Header).call(this));_this.state={loggedIn:false,user:'Guest'};return _this;}_createClass(Header,[{key:'componentDidMount',value:function componentDidMount(){try{var session=JSON.parse(sessionStorage.getItem('intview'));this.setState({loggedIn:true,user:session.username});}catch(e){console.log('Error',e);}}//========================================
-	// My Code
-	//========================================
-	//login: the actual form action
-	},{key:'login',value:function login(e){var _this2=this;e.preventDefault();var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
-	fetch('http://localhost:3000/v1/login',{method:'POST',body:JSON.stringify({email:e.target.email.value,password:e.target.password.value}),headers:myHeaders}).then(function(r){return r.json();}).then(function(data){if(data.error){console.log(data.error);//INVALIDDDDDWill do some stuff here later
-	}else{sessionStorage.setItem('intview',JSON.stringify(data));console.log(sessionStorage.getItem('intview'));_this2.setState({loggedIn:true,user:JSON.parse(sessionStorage.getItem('intview')).username});}});}//========================================
-	// LOGOUT!
-	},{key:'logout',value:function logout(){sessionStorage.removeItem('intview');window.location="/";}//========================================
-	// logged in? renders a component
-	},{key:'loggedIn',value:function loggedIn(loggedInState){if(loggedInState){return _react2.default.createElement('div',null,_react2.default.createElement('h3',null,'Hi ',this.state.user),_react2.default.createElement('button',{onClick:this.logout.bind(this)},'Logout'));}else{return _react2.default.createElement('form',{onSubmit:this.login.bind(this)},_react2.default.createElement('p',null,'Login to view your dashboard:'),_react2.default.createElement('input',{name:'email',type:'text',placeholder:'Email'}),_react2.default.createElement('input',{name:'password',type:'text',placeholder:'Password'}),_react2.default.createElement('button',null,'Submit'));}}//========================================
-	},{key:'render',value:function render(){return _react2.default.createElement('header',null,_react2.default.createElement(_Nav2.default,null),_react2.default.createElement('h2',null,'IntView'),this.loggedIn(this.state.loggedIn),_react2.default.createElement('br',null),_react2.default.createElement('br',null),_react2.default.createElement('hr',null));}}]);return Header;}(_react2.default.Component);exports.default=Header;
-
-/***/ },
-/* 247 */
-/*!*************************************!*\
-  !*** ./src/client/app/Register.jsx ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Register=function Register(props){var register=function register(e){e.preventDefault();var data={user:{username:e.target.username.value,email:e.target.email.value,password:e.target.password.value,password_confirmation:e.target['password_confirmation'].value}};console.log(data);e.target.reset();//send it to the server
-	var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
-	fetch('http://localhost:3000/v1/users',{method:'POST',body:JSON.stringify(data),headers:myHeaders}).then(function(r){return r.json();}).then(function(r){console.log(r);// log them in
-	if(r.error){console.log(r.error);//INVALIDDDDDWill do some stuff here later
-	}else{sessionStorage.setItem('intview',JSON.stringify(r));console.log(sessionStorage.getItem('intview'));}//send them away
-	window.location="/dashboard";});};return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Register'),_react2.default.createElement('form',{onSubmit:register},_react2.default.createElement('input',{type:'text',name:'username',placeholder:'Username'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'text',name:'email',placeholder:'Email'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'password',name:'password',placeholder:'Password'}),_react2.default.createElement('br',null),_react2.default.createElement('input',{type:'password',name:'password_confirmation',placeholder:'Password Again'}),_react2.default.createElement('br',null),_react2.default.createElement('button',null,'Sign Up')));};exports.default=Register;
 
 /***/ }
 /******/ ]);
