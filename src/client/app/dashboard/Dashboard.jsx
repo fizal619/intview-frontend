@@ -1,14 +1,18 @@
 import React from 'react'
-
-//TODO refer to wireframe
-
+import Active from './Active.jsx'
 
 class Dashboard extends React.Component{
 
   constructor(){
     super()
     this.state={
-      applications:[]
+      applications:[],
+      active: {
+        application:{
+          title: 'Responses for a selected Applicaton will appear here.'
+        },
+        responses:[]
+      }
     }
   }
 
@@ -83,6 +87,10 @@ class Dashboard extends React.Component{
   //========================================
 
 
+
+  //========================================
+
+
   render(){
     return(
       <div className="row">
@@ -109,7 +117,7 @@ class Dashboard extends React.Component{
         </div>
         </div>
         <div className="col-md-6">
-
+          <Active application={this.state.active} />
         </div>
       </div>
     )
