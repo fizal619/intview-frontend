@@ -67,7 +67,8 @@ class Dashboard extends React.Component{
                 <span className="applicationName">{item.application.title}</span> |
                  <span className="responseCount">{item.responses.length} Responses!</span> |
                  <button>Delete</button> |
-                 <button>View</button>
+                 <button>View Responses</button> |
+                 <button onClick={e=> location="/application/"+item.application.id }>Visit</button>
               </p>
               )
           }) : <p>No applications to show.</p>}
