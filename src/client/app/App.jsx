@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header.jsx'
+import Header from './main/Header.jsx'
 
 //children appear in here, TODO define header and footer somehow doesn't work
 

@@ -7,10 +7,10 @@ import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import {App}                          from './App.jsx'
 
 //pages
-import Index                          from './Index.jsx'
-import Dashboard                      from './Dashboard.jsx'
-import Register                      from './Register.jsx'
-import Application                    from './Application.jsx'
+import Index                          from './main/Index.jsx'
+import Dashboard                      from './dashboard/Dashboard.jsx'
+import Register                      from './users/Register.jsx'
+import Application                    from './main/Application.jsx'
 import ThankYou                       from './ThankYou.jsx'
 
 // Our react class
