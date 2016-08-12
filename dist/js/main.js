@@ -47,8 +47,7 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 1);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// require('bootstrap/dist/css/bootstrap.css');
-	__webpack_require__(/*! ../css/styles.css */ 247);
+	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 1);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}__webpack_require__(/*! ../css/styles.css */ 247);
 
 /***/ },
 /* 1 */
@@ -8509,7 +8508,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _Header=__webpack_require__(/*! ./main/Header.jsx */ 252);var _Header2=_interopRequireDefault(_Header);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}//children appear in here, TODO define header and footer somehow doesn't work
-	var App=exports.App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement(_Header2.default,null),children);};
+	var App=exports.App=function App(_ref){var children=_ref.children;return _react2.default.createElement('div',null,_react2.default.createElement('div',{className:'container'},_react2.default.createElement(_Header2.default,null),children));};
 
 /***/ },
 /* 240 */,
@@ -8565,7 +8564,7 @@
 	},{key:'getApplications',value:function getApplications(){var _this3=this;// try to get the token from the sessionStorage
 	var token=JSON.parse(sessionStorage.getItem('intview'))['access_token'];var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Authorization',token);myHeaders.append('Origin','http://localhost:4000');//define Origin or the server WILL reject the message.
 	fetch('http://localhost:3000/applications',{method:'GET',headers:myHeaders}).then(function(r){return r.json();}).then(function(data){console.log(data);_this3.setState({applications:data.applications});});}//========================================
-	},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Dashboard'),_react2.default.createElement('br',null),_react2.default.createElement('button',{onClick:function onClick(e){return location="/dashboard/new";}},'New Applicaton'),_react2.default.createElement('div',{id:'results'},this.state.applications.length>0?this.state.applications.map(function(item,key){return _react2.default.createElement('p',{key:key},_react2.default.createElement('span',{className:'applicationName'},item.application.title),' |',_react2.default.createElement('span',{className:'responseCount'},item.responses.length,' Responses!'),' |',_react2.default.createElement('button',{id:item.application.id,'data-id':key,onClick:function onClick(e){_this4.delete(item.application.id,key);}},'Delete'),' |',_react2.default.createElement('button',null,'View Responses'),' |',_react2.default.createElement('button',{onClick:function onClick(e){return location="/application/"+item.application.id;}},'Visit'));}):_react2.default.createElement('p',null,'No applications to show.')));}}]);return Dashboard;}(_react2.default.Component);exports.default=Dashboard;
+	},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'row'},_react2.default.createElement('h1',null,'Dashboard'),_react2.default.createElement('button',{className:'btn btn-primary',onClick:function onClick(e){return location="/dashboard/new";}},'New Applicaton'),_react2.default.createElement('br',null),_react2.default.createElement('div',{className:'col-md-6'},_react2.default.createElement('div',{id:'results'},this.state.applications.length>0?this.state.applications.map(function(item,key){return _react2.default.createElement('p',{key:key},_react2.default.createElement('span',{className:'applicationName'},item.application.title),_react2.default.createElement('span',{className:'responseCount'},' ',item.responses.length),_react2.default.createElement('br',null),_react2.default.createElement('button',{className:'btn btn-warning',onClick:function onClick(e){return location="/application/"+item.application.id;}},' Visit'),_react2.default.createElement('button',{className:'btn btn-success'},'View Responses'),_react2.default.createElement('button',{className:'btn btn-danger',id:item.application.id,'data-id':key,onClick:function onClick(e){_this4.delete(item.application.id,key);}},'Delete'),_react2.default.createElement('br',null));}):_react2.default.createElement('p',null,'No applications to show.'))),_react2.default.createElement('div',{className:'col-md-6'}));}}]);return Dashboard;}(_react2.default.Component);exports.default=Dashboard;
 
 /***/ },
 /* 250 */

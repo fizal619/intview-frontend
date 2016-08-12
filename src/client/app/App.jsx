@@ -5,7 +5,9 @@ import Header from './main/Header.jsx'
 
 export const App = ( { children } ) => (
   <div>
+    <div className="container">
     <Header />
     { children }
+    </div>
   </div>
 )

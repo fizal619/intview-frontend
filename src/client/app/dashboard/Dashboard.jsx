@@ -85,22 +85,29 @@ class Dashboard extends React.Component{
 
   render(){
     return(
-      <div>
-        <h1>Dashboard</h1>
-        <br/>
-        <button onClick={e=> location="/dashboard/new"}>New Applicaton</button>
+      <div className="row">
+      <h1>Dashboard</h1>
+      <button className="btn btn-primary" onClick={e=> location="/dashboard/new"}>New Applicaton</button>
+      <br/>
+      <div className="col-md-6">
         <div id="results">
           {this.state.applications.length > 0 ? this.state.applications.map((item,key)=>{
             return(
               <p key={key}>
-                <span className="applicationName">{item.application.title}</span> |
-                <span className="responseCount">{item.responses.length} Responses!</span> |
-                 <button id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button> |
-                 <button>View Responses</button> |
-                 <button onClick={e=> location="/application/"+item.application.id }>Visit</button>
+                <span className="applicationName">{item.application.title}</span>
+                <span className="responseCount"> {item.responses.length}</span>
+                <br/>
+                 <button className="btn btn-warning" onClick={e=> location="/application/"+item.application.id }> Visit</button>
+                 <button className="btn btn-success">View Responses</button>
+                 <button className="btn btn-danger" id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button>
+                 <br/>
               </p>
               )
           }) : <p>No applications to show.</p>}
+        </div>
+        </div>
+        <div className="col-md-6">
+
         </div>
       </div>
     )
