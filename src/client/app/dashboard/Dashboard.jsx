@@ -88,7 +88,7 @@ class Dashboard extends React.Component{
       <div>
         <h1>Dashboard</h1>
         <br/>
-        <button>New Applicaton</button>
+        <button onClick={e=> location="/dashboard/new"}>New Applicaton</button>
         <div id="results">
           {this.state.applications.length > 0 ? this.state.applications.map((item,key)=>{
             return(

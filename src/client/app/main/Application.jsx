@@ -23,7 +23,7 @@ export default class Application extends React.Component {
     .then(r=>r.json())
     .then(r=>{
 
-      r.questions = r.questions.split('|')
+      r.questions = JSON.parse(r.questions)
 
       this.setState({
         application: r
