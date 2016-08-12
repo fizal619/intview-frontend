@@ -89,11 +89,12 @@ class Dashboard extends React.Component{
       <h1>Dashboard</h1>
       <button className="btn btn-primary" onClick={e=> location="/dashboard/new"}>New Applicaton</button>
       <br/>
+      <br/>
       <div className="col-md-6">
         <div id="results">
           {this.state.applications.length > 0 ? this.state.applications.map((item,key)=>{
             return(
-              <p key={key}>
+              <h4 key={key}>
                 <span className="applicationName">{item.application.title}</span>
                 <span className="responseCount"> {item.responses.length}</span>
                 <br/>
@@ -101,7 +102,8 @@ class Dashboard extends React.Component{
                  <button className="btn btn-success">View Responses</button>
                  <button className="btn btn-danger" id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button>
                  <br/>
-              </p>
+                 <br/>
+              </h4>
               )
           }) : <p>No applications to show.</p>}
         </div>

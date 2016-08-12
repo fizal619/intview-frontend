@@ -82,7 +82,7 @@ export default class Header extends React.Component{
       return(
         <div>
           <h3>Hi {this.state.user}</h3>
-          <button onClick={this.logout.bind(this)}>Logout</button>
+          <button className="btn btn-primary" onClick={this.logout.bind(this)}>Logout</button>
         </div>
         )
     }else{
@@ -91,7 +91,7 @@ export default class Header extends React.Component{
           <p>Login to view your dashboard:</p>
           <input name="email" type="text" placeholder="Email" />
           <input name="password" type="text" placeholder="Password" />
-          <button>Submit</button>
+          <button className="btn btn-primary">Submit</button>
         </form>
         )
     }
