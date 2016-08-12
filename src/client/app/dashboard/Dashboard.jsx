@@ -86,7 +86,11 @@ class Dashboard extends React.Component{
 
   //========================================
 
-
+  updateActive(id){
+    this.setState({
+      active: this.state.applications[id]
+    })
+  }
 
   //========================================
 
@@ -107,7 +111,7 @@ class Dashboard extends React.Component{
                 <span className="responseCount"> {item.responses.length}</span>
                 <br/>
                  <button className="btn btn-warning" onClick={e=> location="/application/"+item.application.id }> Visit</button>
-                 <button className="btn btn-success">View Responses</button>
+                 <button onClick={()=>this.updateActive(key)} className="btn btn-success">View Responses</button>
                  <button className="btn btn-danger" id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button>
                  <br/>
                  <br/>
