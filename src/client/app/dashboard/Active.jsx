@@ -24,9 +24,6 @@ const Active =props=>{
 
   return(
       <div>
-        <p>
-          A - Openness, B - Conscientiousness, C - Extraversion, D - Agreeableness, E - Emotional range
-        </p>
         <h3>{props.application.application.title}</h3>
         {props.application.responses.length > 0 ? props.application.responses.map((response, key)=>{
           return(
@@ -35,10 +32,14 @@ const Active =props=>{
                 {genChart(response.personality_index)}
                 <h4 className="card-title">{response.name}</h4>
                 <p className="card-text">{response.email}</p>
+                <p className="card-text">
+          A - Openness, B - Conscientiousness, C - Extraversion, D - Agreeableness, E - Emotional range
+        </p>
               </div>
             </div>
             )
-        }) : 'No responses yet'}
+        }) : ''}
+
       </div>
     )
 }

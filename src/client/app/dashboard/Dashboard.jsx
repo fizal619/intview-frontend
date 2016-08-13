@@ -98,26 +98,38 @@ class Dashboard extends React.Component{
   render(){
     return(
       <div className="row">
-      <h1>Dashboard</h1>
-      <button className="btn btn-primary" onClick={e=> location="/dashboard/new"}>New Applicaton</button>
+      <div className="row">
+        <div className="col-md-6"><h1>Dashboard</h1></div>
+        <div className="col-md-6 newApplication"><button className="btn btn-primary" onClick={e=> location="/dashboard/new"}>New Applicaton</button></div>
+      </div>
       <br/>
       <br/>
       <div className="col-md-6">
         <div id="results">
+        <table className="table table-striped">
           {this.state.applications.length > 0 ? this.state.applications.map((item,key)=>{
             return(
-              <h4 key={key}>
-                <span className="applicationName">{item.application.title}</span>
-                <span className="responseCount"> {item.responses.length}</span>
+              <tbody key={key}>
+              <tr>
+              <td>
+
+                <div className="row">
+                  <div className="col-md-10"><span className="applicationName" >{item.application.title}</span></div>
+                  <div className="col-md-2 newApplication"> <strong>{item.responses.length ? item.responses.length : ''}</strong></div>
+                </div>
+
                 <br/>
-                 <button className="btn btn-warning" onClick={e=> location="/application/"+item.application.id }> Visit</button>
-                 <button onClick={()=>this.updateActive(key)} className="btn btn-success">View Responses</button>
-                 <button className="btn btn-danger" id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button>
+                 <button className="btn actions btn-warning" onClick={e=> location="/application/"+item.application.id }> Visit</button>
+                 <button onClick={()=>this.updateActive(key)} className="btn actions btn-success">View Responses</button>
+                 <button className="btn actions btn-danger" id={item.application.id} data-id={key} onClick={e=>{this.delete(item.application.id, key)}} >Delete</button>
                  <br/>
                  <br/>
-              </h4>
+                </td>
+                </tr>
+              </tbody>
               )
           }) : <p>No applications to show.</p>}
+          </table>
         </div>
         </div>
         <div className="col-md-6">

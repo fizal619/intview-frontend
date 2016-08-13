@@ -88,10 +88,11 @@ export default class Header extends React.Component{
     }else{
       return(
         <form onSubmit={this.login.bind(this)}>
-          <p>Login to view your dashboard:</p>
+          <p>Login to view your dashboard.</p>
           <input name="email" type="text" placeholder="Email" />
-          <input name="password" type="text" placeholder="Password" />
-          <button className="btn btn-primary">Submit</button>
+          <input name="password" type="password" placeholder="Password" />
+          <br />
+          <button className="btn btn-primary">Login</button>
         </form>
         )
     }
@@ -103,13 +104,16 @@ export default class Header extends React.Component{
 
   render(){
     return(
-        <header>
-          <Nav />
-          <h2>IntView</h2>
-          {this.loggedIn(this.state.loggedIn)}
+        <header className="page-header">
           <br/>
+          <div className="row">
+            <div className="col-md-6"> <h2 className="logo" >IntView</h2> </div>
+            <div className="col-md-6 login"> {this.loggedIn(this.state.loggedIn)} </div>
+          </div>
           <br/>
           <hr/>
+          <Nav />
+
         </header>
       )
   }

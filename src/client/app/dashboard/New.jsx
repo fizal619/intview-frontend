@@ -81,7 +81,7 @@ const New =props=>{
           <p>Custom Questions: <br/>
             <textarea id="customQuestions" form="create" name="custom" rows="8" cols="80" placeholder="If you would like to include your own questions, you can enter them here; each on a new line. "></textarea>
           </p>
-          <button>Submit</button>
+          <button className="btn btn-primary">Submit</button>
         </form>
       </div>
     )

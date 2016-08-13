@@ -17,14 +17,12 @@ const Nav = () => {
       console.log('error in the navigation try catch, yes this is a very specific message.')
     }
     return(
-
         <li><Link to="/register" activeClassName="active">Register</Link></li>
-
       )
   }
 
   return (
-  <ul>
+  <ul className="nav">
     <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
     {loggedIn()}
     <li><a href="http://github.com/fizal619/intview-backend">About This Project</a></li>

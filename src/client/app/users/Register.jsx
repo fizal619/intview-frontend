@@ -34,7 +34,7 @@ const Register =props=>{
       // log them in
 
       if (r.error) {
-          console.log(r.error) //INVALIDDDDDWill do some stuff here later
+          console.log(r.error) //INVALIDDDDD Will do some stuff here later
       }else{
         sessionStorage.setItem('intview',JSON.stringify(r))
         console.log(sessionStorage.getItem('intview'))
@@ -47,14 +47,16 @@ const Register =props=>{
   }
 
   return(
-       <div>
+       <div className="register">
         <h1>Register</h1>
         <form onSubmit={register}>
           <input type="text" name="username" placeholder="Username" /><br/>
           <input type="text" name="email" placeholder="Email" /><br/>
           <input type="password" name="password" placeholder="Password" /><br/>
-          <input type="password" name="password_confirmation" placeholder="Password Again" /><br/>
-          <button>Sign Up</button>
+          <input type="password" name="password_confirmation" placeholder="Password Again" />
+          <br/>
+          <br/>
+          <button className="btn btn-primary">Sign Up</button>
         </form>
        </div>
     )
