@@ -23,11 +23,13 @@
   },
   "homepage": "https://github.com/fizal619/intview-frontend#readme",
   "dependencies": {
+    "amcharts3-react": "github:amcharts/amcharts3-react",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "pg-promise": "^5.2.7",
-    "react-router": "^2.6.1"
+    "react-router": "^2.6.1",
+    "recharts": "^0.13.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",
