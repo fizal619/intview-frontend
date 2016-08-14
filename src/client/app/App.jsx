@@ -5,7 +5,7 @@ import Footer from './main/Footer.jsx'
 //children appear in here, TODO define header and footer somehow doesn't work
 
 export const App = ( { children } ) => (
-  <div class="outer">
+  <div className="outer">
     <div className="container">
     <Header />
     { children }

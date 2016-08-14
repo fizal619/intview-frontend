@@ -99,7 +99,7 @@ class Dashboard extends React.Component{
     return(
       <div className="row">
       <div className="row">
-        <div className="col-md-6"><h1>Dashboard</h1></div>
+        <div className="col-md-6"><h1> Dashboard</h1></div>
         <div className="col-md-6 newApplication"><button className="btn btn-primary" onClick={e=> location="/dashboard/new"}>New Applicaton</button></div>
       </div>
       <br/>
