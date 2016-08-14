@@ -101,7 +101,7 @@ export default class Application extends React.Component {
               return(
                 <p key={key}>
                  {item} <br/>
-                <textarea rows="8" cols="80" placeholder="Please use at least 500 words in your answer..."></textarea>
+                <textarea rows="8" cols="80" placeholder="Please use at least 300 words in your answer..."></textarea>
                 </p>
                 )
             })}

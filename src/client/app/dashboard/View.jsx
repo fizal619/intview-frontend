@@ -6,7 +6,7 @@ const View =props=>{
   let psuedoState = JSON.parse(sessionStorage.getItem('application'))
   if(psuedoState){
     console.log(psuedoState)
-    // sessionStorage.removeItem('application')
+    sessionStorage.removeItem('application')
   }else{
     console.log('it doesn\'t exist')
     location = "/dashboard"
@@ -24,7 +24,7 @@ const View =props=>{
       <p><strong>Applicant:</strong> {psuedoState.response.name}, {psuedoState.response.email}</p>
       <h4>Cover Letter</h4>
       <p>{coverLetter}</p>
-      <h4>Interview Questions:</h4>
+      <h4>Essay Questions:</h4>
       <div className="well">
       {questions.map((item, key)=>{
         return(

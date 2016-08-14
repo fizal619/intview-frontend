@@ -8,6 +8,7 @@ const Active =props=>{
   const view=(id)=>{
     //save the current Application with the selected response to sessionStorage
     let application = {application: props.application.application, response: props.application.responses[id]}
+    sessionStorage.removeItem('application')
     sessionStorage.setItem('application', JSON.stringify(application))
     location = "/dashboard/view"
   }
