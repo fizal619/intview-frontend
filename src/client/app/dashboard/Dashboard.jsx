@@ -115,7 +115,7 @@ class Dashboard extends React.Component{
 
                 <div className="row">
                   <div className="col-md-10"><span className="applicationName" >{item.application.title}</span></div>
-                  <div className="col-md-2 newApplication"> <strong>{item.responses.length ? item.responses.length : ''}</strong></div>
+                  <div className="col-md-2 newApplication"> <strong className="responseCount">{item.responses.length ? item.responses.length : ''}</strong></div>
                 </div>
 
                 <br/>

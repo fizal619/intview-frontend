@@ -105,12 +105,10 @@ export default class Header extends React.Component{
   render(){
     return(
         <header className="page-header">
-          <br/>
           <div className="row">
             <div className="col-md-6"> <h2 className="logo" >IntView</h2> </div>
             <div className="col-md-6 login"> {this.loggedIn(this.state.loggedIn)} </div>
           </div>
-          <br/>
           <hr/>
           <Nav />
 

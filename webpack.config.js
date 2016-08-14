@@ -16,7 +16,7 @@ module.exports = {
   },
   cache: true,
   debug: true,
-  devtool: 'eval-source-map',
+  devtool: 'inline-eval-cheap-source-ma',
   stats: {
     colors: true,
     reasons: true
@@ -30,7 +30,7 @@ module.exports = {
       appMountId: 'container'
     }),
     new ExtractTextPlugin('/css/[name].css', {
-      allChunks: true
+      allChunks: false
     })
   ],
 

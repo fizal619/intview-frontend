@@ -1,12 +1,29 @@
 /* Custom CSS to be delivered into the 'dist/' directory */
+
 body{
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
+  font-size: 62.5%;
+}
+
+footer{
+  /*position: fixed;*/
+  text-align: center;
+  margin:200px 0 0 0;
+  /*width:20%;*/
+  /*top:95vh;*/
+  /*left:50vw;*/
+  /*transform: translateX(-50%);*/
+}
+
+
+.container{
+  background-color: white;
 }
 
 
 header{
   margin:20px -20px;
-  background-color: #2c3e50;
+  background-color: #c0392b;
   border-radius: 3px;
   color:white;
   padding:20px;
@@ -58,7 +75,7 @@ button{
 }
 
 .logo{
-  font-size: 80px;
+  font-size: 7em;
 }
 
 .register{
@@ -79,3 +96,9 @@ button{
   margin:4px;
 }
 
+.responseCount{
+  color: white;
+  background-color: #C93035;
+  padding: 5px 8px;
+  border-radius: 50%;
+}

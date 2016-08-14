@@ -25,7 +25,6 @@ const Nav = () => {
   <ul className="nav">
     <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
     {loggedIn()}
-    <li><a href="http://github.com/fizal619/intview-backend">About This Project</a></li>
   </ul>
   )
 }
