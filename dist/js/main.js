@@ -47,7 +47,7 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 1);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}__webpack_require__(/*! ../css/styles.css */ 633);__webpack_require__(/*! ../css/bootstrap.css */ 637);
+	'use strict';var _Routes=__webpack_require__(/*! ./Routes.jsx */ 1);var _Routes2=_interopRequireDefault(_Routes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}__webpack_require__(/*! ../css/styles.css */ 634);__webpack_require__(/*! ../css/bootstrap.css */ 638);
 
 /***/ },
 /* 1 */
@@ -56,7 +56,7 @@
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 176);var _App=__webpack_require__(/*! ./App.jsx */ 239);var _Index=__webpack_require__(/*! ./main/Index.jsx */ 243);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./dashboard/Dashboard.jsx */ 244);var _Dashboard2=_interopRequireDefault(_Dashboard);var _New=__webpack_require__(/*! ./dashboard/New.jsx */ 629);var _New2=_interopRequireDefault(_New);var _Register=__webpack_require__(/*! ./users/Register.jsx */ 630);var _Register2=_interopRequireDefault(_Register);var _Application=__webpack_require__(/*! ./main/Application.jsx */ 631);var _Application2=_interopRequireDefault(_Application);var _View=__webpack_require__(/*! ./dashboard/View.jsx */ 639);var _View2=_interopRequireDefault(_View);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 632);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 36);var _reactDom2=_interopRequireDefault(_reactDom);var _reactRouter=__webpack_require__(/*! react-router */ 176);var _App=__webpack_require__(/*! ./App.jsx */ 239);var _Index=__webpack_require__(/*! ./main/Index.jsx */ 243);var _Index2=_interopRequireDefault(_Index);var _Dashboard=__webpack_require__(/*! ./dashboard/Dashboard.jsx */ 244);var _Dashboard2=_interopRequireDefault(_Dashboard);var _New=__webpack_require__(/*! ./dashboard/New.jsx */ 629);var _New2=_interopRequireDefault(_New);var _Register=__webpack_require__(/*! ./users/Register.jsx */ 630);var _Register2=_interopRequireDefault(_Register);var _Application=__webpack_require__(/*! ./main/Application.jsx */ 631);var _Application2=_interopRequireDefault(_Application);var _View=__webpack_require__(/*! ./dashboard/View.jsx */ 632);var _View2=_interopRequireDefault(_View);var _ThankYou=__webpack_require__(/*! ./ThankYou.jsx */ 633);var _ThankYou2=_interopRequireDefault(_ThankYou);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import the libs we need
 	//templates
 	//pages
 	// Our react class
@@ -16090,37 +16090,6 @@
 
 /***/ },
 /* 632 */
-/*!*************************************!*\
-  !*** ./src/client/app/ThankYou.jsx ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ThankYou=function ThankYou(props){return _react2.default.createElement('h1',null,'Thank You');};exports.default=ThankYou;
-
-/***/ },
-/* 633 */
-/*!***********************************!*\
-  !*** ./src/client/css/styles.css ***!
-  \***********************************/
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 634 */,
-/* 635 */,
-/* 636 */,
-/* 637 */
-/*!**************************************!*\
-  !*** ./src/client/css/bootstrap.css ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 638 */,
-/* 639 */
 /*!*******************************************!*\
   !*** ./src/client/app/dashboard/View.jsx ***!
   \*******************************************/
@@ -16130,6 +16099,36 @@
 	var psuedoState=JSON.parse(sessionStorage.getItem('application'));if(psuedoState){console.log(psuedoState);sessionStorage.removeItem('application');}else{console.log('it doesn\'t exist');location="/dashboard";}// establish some variables
 	var questions=JSON.parse(psuedoState.application.questions);var answers=JSON.parse(psuedoState.response.content);var coverLetter=answers.shift();// console.log(answers)
 	return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,psuedoState.application.title),_react2.default.createElement('p',null,_react2.default.createElement('strong',null,'Applicant:'),' ',psuedoState.response.name,', ',psuedoState.response.email),_react2.default.createElement('h4',null,'Cover Letter'),_react2.default.createElement('p',null,coverLetter),_react2.default.createElement('h4',null,'Essay Questions:'),_react2.default.createElement('div',{className:'well'},questions.map(function(item,key){return _react2.default.createElement('details',{key:key},_react2.default.createElement('summary',null,_react2.default.createElement('strong',null,item)),_react2.default.createElement('p',null,answers[key]));})));};exports.default=View;
+
+/***/ },
+/* 633 */
+/*!*************************************!*\
+  !*** ./src/client/app/ThankYou.jsx ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ThankYou=function ThankYou(props){return _react2.default.createElement('h1',null,'Thank You');};exports.default=ThankYou;
+
+/***/ },
+/* 634 */
+/*!***********************************!*\
+  !*** ./src/client/css/styles.css ***!
+  \***********************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */
+/*!**************************************!*\
+  !*** ./src/client/css/bootstrap.css ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
