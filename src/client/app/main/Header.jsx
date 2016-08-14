@@ -54,7 +54,7 @@ export default class Header extends React.Component{
           // console.log(data.error) //INVALIDDDDDWill do some stuff here later
       }else{
         sessionStorage.setItem('intview',JSON.stringify(data))
-        console.log(sessionStorage.getItem('intview'))
+        // console.log(sessionStorage.getItem('intview'))
         this.setState({
           loggedIn: true,
           user: JSON.parse(sessionStorage.getItem('intview')).username
