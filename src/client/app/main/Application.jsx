@@ -57,14 +57,14 @@ export default class Application extends React.Component {
       email: event.target.email.value,
       content: JSON.stringify(content)
     }
-    console.log(response)
+    // console.log(response)
 
     //send it to the server
 
     var myHeaders = new Headers()
 
     myHeaders.append('Content-Type', 'application/json')
-    myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
+    myHeaders.append('Origin', 'https://intview.herokuapp.com') //define Origin or the server WILL reject the message.
 
     fetch('https://intview-backend.herokuapp.com/responses', {
       method:'POST',
@@ -74,7 +74,7 @@ export default class Application extends React.Component {
     })
     .then(r=>r.json())
     .then(data=>{
-      console.log(data)
+      // console.log(data)
     })
 
   }

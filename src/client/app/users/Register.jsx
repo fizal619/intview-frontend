@@ -12,14 +12,14 @@ const Register =props=>{
         password_confirmation: e.target['password_confirmation'].value
       }
     }
-    console.log(data)
+    // console.log(data)
     e.target.reset()
 
     //send it to the server
     var myHeaders = new Headers()
 
     myHeaders.append('Content-Type', 'application/json')
-    myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
+    myHeaders.append('Origin', 'https://intview.herokuapp.com') //define Origin or the server WILL reject the message.
 
     fetch('https://intview-backend.herokuapp.com/v1/users', {
       method:'POST',
@@ -29,15 +29,15 @@ const Register =props=>{
     })
     .then(r=>r.json())
     .then(r=>{
-      console.log(r)
+      // console.log(r)
 
       // log them in
 
       if (r.error) {
-          console.log(r.error) //INVALIDDDDD Will do some stuff here later
+          // console.log(r.error) //INVALIDDDDD Will do some stuff here later
       }else{
         sessionStorage.setItem('intview',JSON.stringify(r))
-        console.log(sessionStorage.getItem('intview'))
+        // console.log(sessionStorage.getItem('intview'))
       }
 
       //send them away

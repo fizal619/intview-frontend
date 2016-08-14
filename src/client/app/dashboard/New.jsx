@@ -22,7 +22,7 @@ const New =props=>{
       title: e.target.title.value,
       questions: JSON.stringify(questions)
     }
-    console.log(data)
+    // console.log(data)
     e.target.reset()
 
     //SEND IT
@@ -33,7 +33,7 @@ const New =props=>{
 
     myHeaders.append('Content-Type', 'application/json')
     myHeaders.append('Authorization', token)
-    myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
+    myHeaders.append('Origin', 'https://intview.herokuapp.com') //define Origin or the server WILL reject the message.
 
     fetch('https://intview-backend.herokuapp.com/applications', {
       method:'POST',
@@ -43,7 +43,7 @@ const New =props=>{
     })
     .then(r=>r.json())
     .then(r=>{
-      console.log(r)
+      // console.log(r)
     })
 
   }

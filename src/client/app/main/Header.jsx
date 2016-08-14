@@ -21,7 +21,7 @@ export default class Header extends React.Component{
       })
 
     }catch(e){
-      console.log('Error',e)
+      // console.log('Error',e) //error handle here
     }
   }
 
@@ -37,7 +37,7 @@ export default class Header extends React.Component{
     var myHeaders = new Headers()
 
     myHeaders.append('Content-Type', 'application/json')
-    myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
+    myHeaders.append('Origin', 'https://intview.herokuapp.com') //define Origin or the server WILL reject the message.
 
     fetch('https://intview-backend.herokuapp.com/v1/login', {
       method:'POST',
@@ -51,7 +51,7 @@ export default class Header extends React.Component{
     .then(r=>r.json())
     .then(data=>{
       if (data.error) {
-          console.log(data.error) //INVALIDDDDDWill do some stuff here later
+          // console.log(data.error) //INVALIDDDDDWill do some stuff here later
       }else{
         sessionStorage.setItem('intview',JSON.stringify(data))
         console.log(sessionStorage.getItem('intview'))
