@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "IntView is a platform for automating the interview process using the power of AI.",
   "main": "server.js",
+  "engines": {
+    "node": "6.2.0"
+  },
   "private": true,
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules",
