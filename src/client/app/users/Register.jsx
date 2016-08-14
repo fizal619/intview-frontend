@@ -21,7 +21,7 @@ const Register =props=>{
     myHeaders.append('Content-Type', 'application/json')
     myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
 
-    fetch('http://localhost:3000/v1/users', {
+    fetch('https://intview-backend.herokuapp.com/v1/users', {
       method:'POST',
       body: JSON.stringify(data),
       headers: myHeaders,

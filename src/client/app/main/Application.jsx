@@ -19,7 +19,7 @@ export default class Application extends React.Component {
 
   componentDidMount(){
     // fetch the questions from the db
-    fetch('http://localhost:3000/applications/'+this.props.params.id)
+    fetch('https://intview-backend.herokuapp.com/applications/'+this.props.params.id)
     .then(r=>r.json())
     .then(r=>{
 
@@ -66,7 +66,7 @@ export default class Application extends React.Component {
     myHeaders.append('Content-Type', 'application/json')
     myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
 
-    fetch('http://localhost:3000/responses', {
+    fetch('https://intview-backend.herokuapp.com/responses', {
       method:'POST',
       body: JSON.stringify(response),
       headers: myHeaders,

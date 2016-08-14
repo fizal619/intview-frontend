@@ -39,7 +39,7 @@ export default class Header extends React.Component{
     myHeaders.append('Content-Type', 'application/json')
     myHeaders.append('Origin', 'http://localhost:4000') //define Origin or the server WILL reject the message.
 
-    fetch('http://localhost:3000/v1/login', {
+    fetch('https://intview-backend.herokuapp.com/v1/login', {
       method:'POST',
       body: JSON.stringify({
         email: e.target.email.value,
