@@ -9,7 +9,7 @@ class Dashboard extends React.Component{
       applications:[],
       active: {
         application:{
-          title: 'Responses for a selected Applicaton will appear here.'
+          title: 'Responses for a selected applicaton will appear here.'
         },
         responses:[]
       }
@@ -114,8 +114,8 @@ class Dashboard extends React.Component{
               <td>
 
                 <div className="row">
-                  <div className="col-md-10"><span className="applicationName" >{item.application.title}</span></div>
-                  <div className="col-md-2 newApplication"> <strong className="responseCount">{item.responses.length ? item.responses.length : ''}</strong></div>
+                  <div className="col-md-10"><h5 className="applicationName" >{item.application.title}</h5></div>
+                  <div className="col-md-2 newApplication"> <strong className="responseCount">{item.responses.length ? item.responses.length : 0}</strong></div>
                 </div>
 
                 <br/>
@@ -128,7 +128,7 @@ class Dashboard extends React.Component{
                 </tr>
               </tbody>
               )
-          }) : <p>No applications to show.</p>}
+          }) : <td>No applications to show.</td>}
           </table>
         </div>
         </div>

@@ -41,18 +41,21 @@ export default class Application extends React.Component {
     //build the response object
     let length = event.target.children.length
     let count = 2
-    let content = ""
+    let content = []
     while(length > count){
       if(event.target[count.toString()] !== undefined){
-        content += event.target[count.toString()].value + "\n"
+        content.push(event.target[count.toString()].value + "\n")
       }
       count++
     }
+
+    content.pop()
+
     let response = {
       application_id: parseInt(this.props.params.id),
       name: event.target.name.value,
       email: event.target.email.value,
-      content: content
+      content: JSON.stringify(content)
     }
     console.log(response)
 
@@ -102,7 +105,7 @@ export default class Application extends React.Component {
                 </p>
                 )
             })}
-            <button>Submit</button>
+            <button className="btn btn-success">Submit</button>
           </form>
         </div>
       )

@@ -105,6 +105,7 @@ button{
   background-color: #C93035;
   padding: 5px 8px;
   border-radius: 50%;
+  text-align:right;
 }
 
 #container > div > div > div > div.row > div:nth-child(1) > h1{
