@@ -9,7 +9,7 @@ export default class Register extends React.Component{
   constructor(){
     super()
     this.state={
-      registerError:false
+      registerError:false,
       errorMessage: ''
     }
   }
@@ -19,7 +19,7 @@ export default class Register extends React.Component{
   //========================================
 
 
-  register(){
+  register(e){
     e.preventDefault()
     let data = {
       user: {
@@ -51,15 +51,25 @@ export default class Register extends React.Component{
       // log them in
 
       if (r.error) {
-          console.log(r.error) //INVALIDDDDD Will do some stuff here later
-
+          // console.log(r.error) //INVALIDDDDD Will do some stuff here later
+          this.setState({
+            registerError:true,
+            errorMessage: 'Email exists or password too short/didn\'t match.'
+          })
       }else{
+        //log em in
         sessionStorage.setItem('intview',JSON.stringify(r))
-        // console.log(sessionStorage.getItem('intview'))
+
+        //send them away
+        window.location = "/dashboard"
       }
 
-      //send them away
-      window.location = "/dashboard"
+    })
+    .catch(e=>{
+      this.setState({
+            registerError:true,
+            errorMessage: 'Please fill all of the fields.'
+          })
     })
 
   }
@@ -69,7 +79,7 @@ export default class Register extends React.Component{
 
   closeNotification(){
     this.setState({
-      loginError:false
+      registerError:false
     })
   }
 
@@ -81,14 +91,14 @@ export default class Register extends React.Component{
 
          <Notification
             title={"Error!"}
-            isActive={this.state.loginError}
+            isActive={this.state.registerError}
             message={this.state.errorMessage}
             action={"close"}
             onClick={this.closeNotification.bind(this)}
             />
 
           <h1>Register</h1>
-          <form onSubmit={register}>
+          <form onSubmit={this.register.bind(this)}>
             <input type="text" name="username" placeholder="Username" /><br/>
             <input type="text" name="email" placeholder="Email" /><br/>
             <input type="password" name="password" placeholder="Password" /><br/>
