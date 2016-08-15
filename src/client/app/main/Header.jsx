@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav.jsx'
+import { Notification } from 'react-notification'
 
 export default class Header extends React.Component{
 
@@ -8,7 +9,8 @@ export default class Header extends React.Component{
 
     this.state={
       loggedIn: false,
-      user: 'Guest'
+      user: 'Guest',
+      loginError: false
     }
   }
 
@@ -52,7 +54,10 @@ export default class Header extends React.Component{
     .then(data=>{
       if (data.error) {
           // console.log(data.error) //INVALIDDDDDWill do some stuff here later
-          humane.log('Invalid Login!')
+          this.setState({
+            loginError:true
+          })
+
       }else{
         sessionStorage.setItem('intview',JSON.stringify(data))
         // console.log(sessionStorage.getItem('intview'))
@@ -102,10 +107,27 @@ export default class Header extends React.Component{
 
   //========================================
 
+  closeNotification(){
+    this.setState({
+      loginError:false
+    })
+  }
+
+  //========================================
+
 
   render(){
     return(
         <header className="page-header">
+
+        <Notification
+          title={"Error!"}
+          isActive={this.state.loginError}
+          message={'Please check your password/email and try again.'}
+          action={"close"}
+          onClick={this.closeNotification.bind(this)}
+          />
+
           <div className="row">
             <div className="col-md-6"> <h2 className="logo" >IntView</h2> </div>
             <div className="col-md-6 login"> {this.loggedIn(this.state.loggedIn)} </div>

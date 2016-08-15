@@ -1,8 +1,25 @@
 import React    from 'react'
 import {Link}   from 'react-router'
-const Register =props=>{
+import { Notification } from 'react-notification'
 
-  const register=e=>{
+
+
+export default class Register extends React.Component{
+
+  constructor(){
+    super()
+    this.state={
+      registerError:false
+      errorMessage: ''
+    }
+  }
+
+  //========================================
+  // My Code
+  //========================================
+
+
+  register(){
     e.preventDefault()
     let data = {
       user: {
@@ -34,7 +51,8 @@ const Register =props=>{
       // log them in
 
       if (r.error) {
-          // console.log(r.error) //INVALIDDDDD Will do some stuff here later
+          console.log(r.error) //INVALIDDDDD Will do some stuff here later
+
       }else{
         sessionStorage.setItem('intview',JSON.stringify(r))
         // console.log(sessionStorage.getItem('intview'))
@@ -46,20 +64,42 @@ const Register =props=>{
 
   }
 
-  return(
-       <div className="register">
-        <h1>Register</h1>
-        <form onSubmit={register}>
-          <input type="text" name="username" placeholder="Username" /><br/>
-          <input type="text" name="email" placeholder="Email" /><br/>
-          <input type="password" name="password" placeholder="Password" /><br/>
-          <input type="password" name="password_confirmation" placeholder="Password Again" />
-          <br/>
-          <br/>
-          <button className="btn btn-primary">Sign Up</button>
-        </form>
-       </div>
-    )
+  //========================================
+
+
+  closeNotification(){
+    this.setState({
+      loginError:false
+    })
+  }
+
+  //========================================
+
+  render(){
+    return(
+         <div className="register">
+
+         <Notification
+            title={"Error!"}
+            isActive={this.state.loginError}
+            message={this.state.errorMessage}
+            action={"close"}
+            onClick={this.closeNotification.bind(this)}
+            />
+
+          <h1>Register</h1>
+          <form onSubmit={register}>
+            <input type="text" name="username" placeholder="Username" /><br/>
+            <input type="text" name="email" placeholder="Email" /><br/>
+            <input type="password" name="password" placeholder="Password" /><br/>
+            <input type="password" name="password_confirmation" placeholder="Password Again" />
+            <br/>
+            <br/>
+            <button className="btn btn-primary">Sign Up</button>
+          </form>
+         </div>
+      )
+  }
 }
 
-export default Register
+// export default Register
