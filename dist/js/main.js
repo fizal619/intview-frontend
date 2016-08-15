@@ -8524,7 +8524,8 @@
 	//login: the actual form action
 	},{key:'login',value:function login(e){var _this2=this;e.preventDefault();var myHeaders=new Headers();myHeaders.append('Content-Type','application/json');myHeaders.append('Origin','https://intview.herokuapp.com');//define Origin or the server WILL reject the message.
 	fetch('https://intview-backend.herokuapp.com/v1/login',{method:'POST',body:JSON.stringify({email:e.target.email.value,password:e.target.password.value}),headers:myHeaders}).then(function(r){return r.json();}).then(function(data){if(data.error){// console.log(data.error) //INVALIDDDDDWill do some stuff here later
-	}else{sessionStorage.setItem('intview',JSON.stringify(data));console.log(sessionStorage.getItem('intview'));_this2.setState({loggedIn:true,user:JSON.parse(sessionStorage.getItem('intview')).username});}});}//========================================
+	}else{sessionStorage.setItem('intview',JSON.stringify(data));// console.log(sessionStorage.getItem('intview'))
+	_this2.setState({loggedIn:true,user:JSON.parse(sessionStorage.getItem('intview')).username});}});}//========================================
 	// LOGOUT!
 	},{key:'logout',value:function logout(){sessionStorage.removeItem('intview');window.location="/";}//========================================
 	// logged in? renders a component
@@ -8557,7 +8558,7 @@
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Index=function Index(props){return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Home'));};exports.default=Index;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 2);var _react2=_interopRequireDefault(_react);var _reactRouter=__webpack_require__(/*! react-router */ 176);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Index=function Index(props){return _react2.default.createElement('div',null,_react2.default.createElement('h1',null,'Home'),_react2.default.createElement('div',{className:'row'},_react2.default.createElement('div',{className:'col-md-8'},_react2.default.createElement('p',null,_react2.default.createElement('em',null,'Leveraging machine learning and AI to automate the interview process.')),_react2.default.createElement('hr',null),_react2.default.createElement('p',null,'Powered by IBM watson Intview is a platform for creating smarter job applications that can be shared with prospective applicants.'),_react2.default.createElement('p',null,'Intview hopes to make hiring easier by letting you see an unbiased assesment of an applicant\'s personality. The assesment is done on the Big 5 scale; however more detailed insights are to come.'),_react2.default.createElement('p',null,'Sign up to start hiring smartly today!'),_react2.default.createElement('button',{onClick:function onClick(e){location="/register";},className:'btn btn-primary'},'Sign up')),_react2.default.createElement('div',{className:'col-md-4'},_react2.default.createElement('img',{width:'300',height:'auto',src:'http://i.imgur.com/EC7DgEU.png',alt:'5 personality traits from http://karmagenes.co/science/'}))));};exports.default=Index;
 
 /***/ },
 /* 244 */
