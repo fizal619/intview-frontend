@@ -44,6 +44,7 @@ const New =props=>{
     .then(r=>r.json())
     .then(r=>{
       // console.log(r)
+      location = "/dashboard"
     })
 
   }
