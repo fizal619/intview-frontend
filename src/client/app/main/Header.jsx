@@ -52,6 +52,7 @@ export default class Header extends React.Component{
     .then(data=>{
       if (data.error) {
           // console.log(data.error) //INVALIDDDDDWill do some stuff here later
+          humane.log('Invalid Login!')
       }else{
         sessionStorage.setItem('intview',JSON.stringify(data))
         // console.log(sessionStorage.getItem('intview'))
